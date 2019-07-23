@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>OcFramework - Home</title>
+<link rel="icon" href="../../../../common/image/favicon.ico" th:href="@{/resource/common/image/favicon.ico}">
+<link rel="stylesheet" href="../../common/css/easyUI/easyui.css" th:href="@{/resource/common/css/easyUI/easyui.css}">
+<link rel="stylesheet" href="../../common/css/easyUI/icon.css" th:href="@{/resource/common/css/easyUI/icon.css}">
+<link rel="stylesheet" href="../../common/css/ocFramework/ocFramework.css" th:href="@{/resource/common/css/ocFramework/ocFramework.css}">
+<link rel="stylesheet" href="home.css" th:href="@{/resource/template/basic/easyUI/home/home.css}">
+</head>
+
+<body id="layoutBody" class="easyui-layout">
+    <div data-options="region:'north'" class="north-layout">
+        <img alt="Home" src="../../../../common/image/logo.png" th:src="@{/resource/common/image/logo.png}" class="logo-image">
+    </div>
+    <div data-options="region:'west'" class="west-layout">
+        <ul id="menuTree" class="easyui-tree"></ul>
+    </div>
+    <div data-options="region:'center'" class="center-layout"></div>
+    
+    <script type="text/javascript" src="../../common/js/jquery/jquery-3.1.1.js" th:src="@{/resource/common/js/jquery/jquery-3.1.1.js}"></script>
+    <script type="text/javascript" src="../../common/js/easyUI/jquery.easyui.min.js" th:src="@{/resource/common/js/easyUI/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" src="../../common/js/easyUI/easyui-lang-zh_CN.js" th:src="@{/resource/common/js/easyUI/easyui-lang-zh_CN.js}"></script>
+    <script type="text/javascript" th:inline="javascript">
+    	window.ocFramework = new Object();
+    	window.ocFramework.pageContext = /*[[${pageContext}]]*/ undefined;
+    	window.ocFramework.menus = /*[[${menus}]]*/ undefined;
+    	window.ocFramework.csrfObject = {
+    		parameterName : /*[[${_csrf.parameterName}]]*/ undefined,
+    		headerName : /*[[${_csrf.headerName}]]*/ undefined,
+    		token : /*[[${_csrf.token}]]*/ undefined
+    	}
+    </script>
+    <script type="text/javascript" src="home.js" th:src="@{/resource/template/basic/easyUI/home/home.js}"></script>
+</body>
+</html>

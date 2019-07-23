@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.north-layout {
+	height:50px;
+	background:#222222;
+}
+
+.west-layout {
+	width:15%;
+	padding:10px;
+}
+
+.center-layout {
+	padding:5px;
+	background:#eee;
+}
+
+.logo-image {
+	padding-top:15px;
+	padding-left:15px;
+	height:25px;
+}
+
+.oc-form div {
+	margin : 10px;
+}
+
+.oc-data-form label {
+	width : 60px;
+	display : inline-block;
+}
+
+.oc-hidden {
+	display : none;
+}
